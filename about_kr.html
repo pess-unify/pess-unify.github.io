@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Unify</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            opacity: 0;
+            transform: translateY(100%);
+            transition: opacity 1s ease, transform 1s ease;
+            background-color: #000;
+            color: #fff;
+        }
+
+        body.loaded {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        nav {
+            background-color: #000;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 10px;
+            background-color: #000;
+            color: #fff;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            padding: 5px;
+            position: relative;
+        }
+
+        nav ul li a::after {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: -2px;
+            right: 0;
+            width: 0;
+            height: 2px;
+            background-color: #e7e3e3;
+            transition: width 0.3s ease;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+            right: inherit;
+            left: 0;
+            transition: width 0.3s ease, left 0.3s ease;
+        }
+
+        section {
+            margin: 20px;
+            color: #fff;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .dropbtn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 9999;
+        }
+
+        .dropdown {
+            position: fixed;
+            top: 50px; 
+            right: 190px;
+            background-color: white;
+            color: black;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color:white;
+            color: black;
+        }
+    </style>
+    <script>
+        
+        window.addEventListener('load', function() {
+            document.body.classList.add('loaded');
+        });
+
+        function goToHomePage() {
+            window.location.href = "index_kr.html";
+        }
+    </script>
+</head>
+<body>
+    <header onclick="goToHomePage()">
+        <h1>Unify</h1>
+        <div class="dropdown">
+            <button class="dropbtn btn">Translate button</button>
+            <div class="dropdown-content">
+                <a href="index_zh.html">中文</a>
+                <a href="index.html">English</a>
+                <a href="index_kr.html">한글</a>
+            </div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="about_kr.html" target="_blank">회사 소개</a></li>
+            <li><a href="contact_kr.html" target="_blank">연락하다t</a></li>
+            <li><a href="discount_kr.html" target="_blank">할인</a></li>
+            <li><a href="member_kr.html" target="_blank">회원</a></li>
+        </ul>
+    </nav>  
+    
+    <main>
+        <section>
+            <h1>회사 소개</h1>
+            <p>학생과 학교 간의 소통을 촉진합니다 🌻
+                또한, 학생들에게 다양한 혜택을 제공합니다.</p>
+    
+            <p>UNIFY는 학생들이 다양한 활동을 통해 학습할 수 있기를 바라며, 그 과정에서 학생들이 즐거운 시간을 보낼 수 있도록 새로운 캠퍼스 이벤트를 적극적으로 런칭하겠습니다 🌼
+                모든 학생과 함께 즐겁고 활기찬 캠퍼스 생활을 만들어가는 것을 목표로 합니다💐
+                이러한 활동은 또한 학생들이 학습하고 혜택을 얻을 수 있는 기회를 제공합니다 💐</p>
+    
+            <p>마지막으로 UNIFY는 학생회로서의 책임을 다하겠습니다📝
+                다양한 종류의 할인을 제공하고 더 많은 혜택을 확보하기 위해 노력함으로써 학생의 권리와 특권을 강화하고 학생들이 더 많은 혜택을 누릴 수 있도록 노력하고 있습니다 🌼</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright &copy; 2023 Unify 모든 권리 보유.</p>
+    </footer>
+</body>
+</html>

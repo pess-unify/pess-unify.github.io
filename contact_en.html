@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Unify</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            opacity: 0; 
+            transform: translateY(100%); 
+            transition: opacity 1s ease, transform 1s ease; 
+            background-color: #000;
+            color: #fff;
+        }
+
+        body.loaded {
+            opacity: 1; 
+            transform: translateY(0); 
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer; 
+        }
+
+        nav {
+            background-color: #000;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 10px;
+            background-color: #000;
+            color: #fff;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            padding: 5px;
+            position: relative;
+        }
+
+        nav ul li a::after {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: -2px;
+            right: 0;
+            width: 0;
+            height: 2px;
+            background-color: #e7e3e3;
+            transition: width 0.3s ease;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+            right: inherit;
+            left: 0;
+            transition: width 0.3s ease, left 0.3s ease;
+        }
+
+        section {
+            margin: 20px;
+            color: #fff;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+    <script>
+        window.addEventListener('load', function() {
+            document.body.classList.add('loaded'); 
+        });
+
+        function goToHomePage() {
+            window.location.href = "index.html";
+        }
+    </script>
+</head>
+<body>
+    <header onclick="goToHomePage()">
+        <h1>Unify</h1>
+        <div class="dropdown">
+            <button class="dropbtn btn">Translate button</button>
+            <div class="dropdown-content">
+                <a href="index_zh.html">中文</a>
+                <a href="index.html">English</a>
+                <a href="index_kr.html">한글</a>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="about_en.html" target="_blank">About</a></li>
+            <li><a href="contact_en.html" target="_blank">Contact</a></li>
+            <li><a href="discount_en.html" target="_blank">Discount</a></li>
+            <li><a href="member_en.html" target="_blank">Member</a></li>
+        </ul>
+    </nav>  
+
+    <div class="contact-info">
+        <p>email:</p>
+        <p>Instagram: <a href="https://instagram.com/_pess_unify_?igshid=NzZhOTFlYzFmZQ=="><i class="fab fa-instagram"></i></a></p>
+    </div>
+  
+    <footer>
+        <p>Copyright &copy; 2023 Unify All rights reserved</p>
+    </footer>
+</body>
+</html>
