@@ -25,11 +25,10 @@
             color: #fff;
             padding: 20px;
             text-align: center;
-            cursor: pointer;
-        }
+            }
 
         nav {
-            background-color: #000;
+            background-color: #333;
             padding: 10px;
         }
 
@@ -43,7 +42,7 @@
         nav ul li {
             display: inline-block;
             margin-right: 10px;
-            background-color: #000;
+            background-color: #333;
             color: #fff;
         }
 
@@ -89,7 +88,7 @@
             color: #f8fcfe;
             background: transparent;
             border: 2px solid #f8fcfd;
-            border-radius: 0px;
+            border-radius: 5px;
             color: white;
             padding: 8px 16px;
             text-align: center;
@@ -158,6 +157,21 @@
             background-color:white;
             color: black;
         }
+
+    .card {
+        margin: 20px 2;
+        max-width: 400px;
+        color: #fff;
+        background-color: #333;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        transition: transform 0.3s ease;
+        }
+
+    .card:hover {
+        transform: translateY(-5px);
+        }
     </style>
 
     <script>
@@ -171,8 +185,8 @@
     </script>
 </head>
 <body>
-    <header onclick="goToHomePage()">
-        <h1>Unify</h1>
+    <header>
+        <h1 style="position: fixed; top: 5px; left: 20px; z-index: 9999; cursor: pointer;" onclick="goToHomePage()">Unify</h1>
         <div class="dropdown">
             <button class="dropbtn btn">Translate button</button>
             <div class="dropdown-content">
@@ -181,18 +195,18 @@
                 <a href="index_kr.html">한글</a>
             </div>
         </div>
-    </header>   
-    
-    <nav>
-        <ul>
-            <li><a href="about_en.html" target="_blank">About</a></li>
-            <li><a href="contact_en.html" target="_blank">Contact</a></li>
-            <li><a href="discount_en.html" target="_blank">Discount</a></li>
-            <li><a href="member_en.html" target="_blank">Member</a></li>
-        </ul>
-    </nav>  
+        
+        <nav>
+            <ul>
+                <li><a href="about_en.html" target="_blank">About</a></li>
+                <li><a href="contact_en.html" target="_blank">Contact</a></li>
+                <li><a href="discount_en.html" target="_blank">Discount</a></li>
+                <li><a href="member_en.html" target="_blank">Member</a></li>
+            </ul>
+        </nav>  
+    </header>
 
-    <section>
+    <section class="card">
         <h2>Student Union Announcement</h2>
         <p>A1</p>
         <button class="btn btn1" onclick="window.open('a.html', '_blank')">Learn More</button>

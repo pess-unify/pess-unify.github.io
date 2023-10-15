@@ -8,16 +8,16 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            opacity: 0; 
-            transform: translateY(100%); 
-            transition: opacity 1s ease, transform 1s ease; 
+            opacity: 0;
+            transform: translateY(100%);
+            transition: opacity 1s ease, transform 1s ease;
             background-color: #000;
             color: #fff;
         }
 
         body.loaded {
-            opacity: 1; 
-            transform: translateY(0); 
+            opacity: 1;
+            transform: translateY(0);
         }
 
         header {
@@ -25,11 +25,10 @@
             color: #fff;
             padding: 20px;
             text-align: center;
-            cursor: pointer; 
-        }
+            }
 
         nav {
-            background-color: #000;
+            background-color: #333;
             padding: 10px;
         }
 
@@ -43,7 +42,7 @@
         nav ul li {
             display: inline-block;
             margin-right: 10px;
-            background-color: #000;
+            background-color: #333;
             color: #fff;
         }
 
@@ -52,7 +51,6 @@
             color: #fff;
             padding: 5px;
             position: relative;
-
         }
 
         nav ul li a::after {
@@ -84,6 +82,37 @@
             color: #fff;
             padding: 10px;
             text-align: center;
+        }
+
+        .btn {
+            color: #f8fcfe;
+            background: transparent;
+            border: 2px solid #f8fcfd;
+            border-radius: 5px;
+            color: white;
+            padding: 8px 16px;
+            text-align: center;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        .btn1 {
+            background-color: transparent;
+            color: white;
+            border: 2px solid #f8fcfd;
+            padding: 6px 12px;
+            font-size: 12px;
+            transition-duration: 0.3s;
+        }
+
+        .btn1:hover {
+            background-color: white;
+            color: black;
         }
 
         .dropbtn {
@@ -142,7 +171,7 @@
 </head>
 <body>
     <header onclick="goToHomePage()">
-        <h1>Unify</h1>
+        <h1 style="position: fixed; top: 5px; left: 20px; z-index: 9999; cursor: pointer;" onclick="goToHomePage()">Unify</h1>
         <div class="dropdown">
             <button class="dropbtn btn">Translate button</button>
             <div class="dropdown-content">
