@@ -1,9 +1,187 @@
 </html><!DOCTYPE html>
 <html>
-<head><link rel="stylesheet" type="text/css" href="styles/css.css">
-    <script src="scripts/js.js"></script>
+<head>
     <meta charset="UTF-8">
-    <title>MEMBER_KR | Unify-Beta</title>
+    <title>Unify</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            opacity: 0;
+            transform: translateY(100%);
+            transition: opacity 1s ease, transform 1s ease;
+            background-color: #000;
+            color: #fff;
+        }
+
+        body.loaded {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            }
+
+        nav {
+            background-color: #333;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 10px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            padding: 5px;
+            position: relative;
+        }
+
+        nav ul li a::after {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: -2px;
+            right: 0;
+            width: 0;
+            height: 2px;
+            background-color: #e7e3e3;
+            transition: width 0.3s ease;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+            right: inherit;
+            left: 0;
+            transition: width 0.3s ease, left 0.3s ease;
+        }
+
+        section {
+            margin: 20px;
+            color: #fff;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .btn {
+            color: #f8fcfe;
+            background: transparent;
+            border: 2px solid #f8fcfd;
+            border-radius: 5px;
+            color: white;
+            padding: 8px 16px;
+            text-align: center;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        .btn1 {
+            background-color: transparent;
+            color: white;
+            border: 2px solid #f8fcfd;
+            padding: 6px 12px;
+            font-size: 12px;
+            transition-duration: 0.3s;
+        }
+
+        .btn1:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .dropbtn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 9999;
+        }
+
+        .dropdown {
+            position: fixed;
+            top: 50px; 
+            right: 190px;
+            background-color: white;
+            color: black;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color:white;
+            color: black;
+        }
+
+        .card {
+        margin: 20px 2;
+        max-width: 400px;
+        color: #fff;
+        background-color: #333;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+        transform: translateY(-5px);
+        }
+    </style>
+    <script>
+        window.addEventListener('load', function() {
+            document.body.classList.add('loaded');
+        });
+
+        function goToHomePage() {
+            window.location.href = "index_kr.html";
+        }
+    </script>
 </head>
 <body>
     <header onclick="goToHomePage()">
