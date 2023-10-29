@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="styles/NMN.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NMN | Unify-Beta</title>
+</head>
+<body>
+    <div class="unify-container">
+        <svg class="unify" width="400" height="100" viewBox="0 0 400 100">
+            <text x="50" y="80">Unify</text>
+        </svg>
+    </div>
+    <div class="opening-time">Opening Time: October 15, 2023</div>
+    <div class="countdown" id="countdown"></div>
+    <div class="maintenance-notice">Website under maintenance. We apologize for any inconvenience caused.</div>
+
+    <script>
+        const targetDate = new Date("2023-10-26T00:00:00");
+
+        function updateCountdown() {
+            const currentDate = new Date();
+            const timeDifference = targetDate - currentDate;
+
+            if (timeDifference <= 0) {
+                document.getElementById("countdown").textContent = "Opening time has passed";
+                window.location.href = "index.html";
+            } else {
+                const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+                document.getElementById("countdown").textContent = `Countdown: ${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`;
+            }
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>
